@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2D2D2D;
+  --secondary-color: #1F1249;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(145deg, rgb(246, 159, 161) 0%, rgb(202, 212, 252) 75%);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Mulish", sans-serif;
+  line-height: 1.4;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.9rem;
+  color: var(--primary-color);
+}
+@media (max-width: 600px) {
+  .title {
+    text-align: center;
+  }
+}
+
+.text {
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 600px) {
+  .text {
+    text-align: center;
+  }
+}
+
+.mb-small {
+  margin-bottom: 2rem;
+}
+
+.mb-medium {
+  margin-bottom: 3.5rem;
+}
+
+.mb-large {
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 600px) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  display: none;
+}
+@media (max-width: 600px) {
+  .hide-for-desktop {
+    display: block;
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 4rem;
+  gap: 60px;
+  background: rgba(245, 247, 255, 0.85);
+  border-radius: 10px;
+  max-width: 95%;
+  margin: 6rem auto;
+  width: 80rem;
+}
+@media (max-width: 600px) {
+  .box {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0 0 2rem 0;
+  }
+}
+.box__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 85%;
+}
+.box__img {
+  align-self: stretch;
+}
+
+.btn {
+  padding: 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-blue {
+  background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);
+  box-shadow: 0px 6px 18px #9CADF2;
+  color: #fff;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
