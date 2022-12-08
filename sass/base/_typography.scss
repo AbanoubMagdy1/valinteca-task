@@ -5,9 +5,18 @@ body{
 }
 
 .title{
-    font-style: normal;
     font-weight: 700;
     font-size: 3.9rem;
+    color : var(--primary-color);
+
+    @include respond(mobile){
+        text-align: center;
+ 
+    }
+}
+
+.sub-title{
+    font-size: 3rem;
     color : var(--primary-color);
 
     @include respond(mobile){

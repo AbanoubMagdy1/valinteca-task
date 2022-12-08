@@ -14,3 +14,10 @@
     display: block;
     width: 100%;
 }
+
+button:disabled{
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, 0.26);
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.12);
+}
