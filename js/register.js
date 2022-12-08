@@ -73,8 +73,14 @@ async function handleAsync(func, params = {}){
     }
 }
 
+function handleApiError(errors){
+    for(let key in errors){
+        showError(inputs[key], errors[key].join(", "));
+    }
+}
+
 async function callRegisterApi(data){
-    const response = await fetch('https://goldblv.com/api/hiring/tasks/register,', {
+    const response = await fetch('https://goldblv.com/api/hiring/tasks/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -105,9 +111,13 @@ form.addEventListener('submit', async (e) => {
     localStorage.setItem('email', data.email)
 
     startLoading();
-    const [response, error] = await handleAsync(callRegisterApi, data);
+    const [response] = await handleAsync(callRegisterApi, data);
     stopLoading();
-    
-    location.replace('./finish.html')
+
+    if(response.errors){
+        handleApiError(response.errors);
+    } else {
+        location.href = 'finish.html';
+    }
 })
 
