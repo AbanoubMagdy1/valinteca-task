@@ -108,7 +108,6 @@ form.addEventListener('submit', async (e) => {
     const isValid = validate(data);
 
     if(!isValid) return;
-    localStorage.setItem('email', data.email)
 
     startLoading();
     const [response] = await handleAsync(callRegisterApi, data);
@@ -117,6 +116,7 @@ form.addEventListener('submit', async (e) => {
     if(response.errors){
         handleApiError(response.errors);
     } else {
+        localStorage.setItem('email', data.email)
         location.href = 'finish.html';
     }
 })
